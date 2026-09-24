@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-24T16:51:57.605Z",
+  "updatedAt": "2026-09-24T16:54:35.780Z",
   "projects": [
     {
       "slug": "proekt-1a",
@@ -164,8 +164,8 @@
       "deadlines": 1,
       "protocols": 26,
       "mail": 2425,
-      "risks": 1,
-      "publishedAt": 1790268717604
+      "risks": 9,
+      "publishedAt": 1790268875780
     }
   ]
 }
