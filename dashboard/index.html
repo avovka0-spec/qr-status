@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1a3a5c">
+<meta http-equiv="Cache-Control" content="no-store, max-age=0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Сводки проектов">
+<link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+<title>Сводки проектов</title>
+<style>
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  body { margin: 0; font-family: -apple-system, "Segoe UI", Roboto, sans-serif; background: #eef2f7; color: #1a2f4a; font-size: 15px; line-height: 1.4; }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 12px 12px 40px; }
+  .head { background: linear-gradient(135deg, #1a3a5c 0%, #2e5c8a 100%); color: #fff; border-radius: 14px; padding: 18px 18px 16px; box-shadow: 0 6px 18px rgba(26,58,92,.25); }
+  .head h1 { margin: 0 0 4px; font-size: 22px; font-weight: 700; }
+  .head .sub { font-size: 12.5px; opacity: .85; }
+  .head .upd { font-size: 11.5px; margin-top: 10px; padding-top: 10px; border-top: 1px solid rgba(255,255,255,.15); opacity: .85; }
+  .search { width: 100%; box-sizing: border-box; padding: 12px 14px; border: none; border-radius: 10px; font-family: inherit; font-size: 15px; margin-top: 10px; box-shadow: 0 2px 8px rgba(20,30,50,.06); }
+  .search:focus { outline: 2px solid #4a90e2; }
+  .gip-group { margin-top: 16px; }
+  .gip-head { font-size: 13px; font-weight: 700; color: #556; text-transform: uppercase; letter-spacing: .4px; padding: 0 4px 8px; display: flex; align-items: center; gap: 8px; }
+  .gip-count { font-size: 11px; background: #d8e2ee; color: #556; padding: 1px 8px; border-radius: 10px; }
+  .proj-card { display: flex; align-items: center; gap: 12px; background: #fff; border-radius: 14px; padding: 14px 16px; margin-bottom: 8px; text-decoration: none; color: inherit; box-shadow: 0 2px 8px rgba(20,30,50,.06); transition: transform .12s, box-shadow .12s; }
+  .proj-card:active { transform: scale(.99); box-shadow: 0 1px 4px rgba(20,30,50,.1); }
+  .proj-main { flex: 1; min-width: 0; }
+  .proj-name { font-size: 16px; font-weight: 700; color: #1a2f4a; margin-bottom: 2px; }
+  .proj-obj { font-size: 12.5px; color: #8894a4; margin-bottom: 6px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .proj-badges { display: flex; flex-wrap: wrap; gap: 5px; }
+  .bdg { display: inline-block; font-size: 11.5px; padding: 2px 8px; border-radius: 10px; white-space: nowrap; }
+  .bdg-warn { background: #ffebee; color: #b6342c; font-weight: 600; }
+  .bdg-info { background: #e5eef8; color: #1a3a5c; }
+  .bdg-risk { background: #fff8e1; color: #7a5c00; }
+  .bdg-muted { background: #f0f4fa; color: #667788; }
+  .bdg-ok { background: #e7f3e7; color: #2c5a2c; }
+  .proj-pct-circle { flex: 0 0 62px; width: 62px; height: 62px; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+  .proj-pct-circle.good { background: #e7f3e7; color: #2c5a2c; }
+  .proj-pct-circle.mid { background: #fff8e1; color: #7a5c00; }
+  .proj-pct-circle.bad { background: #ffebee; color: #b6342c; }
+  .proj-pct-num { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 17px; font-weight: 700; line-height: 1; }
+  .proj-pct-lbl { font-size: 8px; text-transform: uppercase; letter-spacing: .3px; margin-top: 2px; opacity: .8; }
+  .empty { background: #fff; border-radius: 14px; padding: 40px 20px; margin-top: 16px; text-align: center; color: #8894a4; font-size: 13px; }
+  .foot { text-align: center; padding: 24px 12px 0; color: #8894a4; font-size: 11.5px; line-height: 1.6; }
+  .hidden { display: none !important; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="head">
+    <h1>📊 Сводки проектов</h1>
+    <div class="sub">Всего проектов: 1</div>
+    <div class="upd">Обновлено: 24.09.2026 19:45</div>
+    <input type="search" class="search" id="projSearch" placeholder="🔍 Поиск по названию, ГИПу, объекту…" autocomplete="off">
+  </div>
+<div class="gip-group"><div class="gip-head">👤 — без ГИПа — <span class="gip-count">1</span></div><a class="proj-card" href="https://avovka0-spec.github.io/qr-status/dashboard/2-bd79.html"><div class="proj-main"><div class="proj-name">Тест2</div><div class="proj-obj">ыыы</div><div class="proj-badges"><span class="bdg bdg-warn">⚠ 2</span><span class="bdg bdg-info">📅 1</span><span class="bdg bdg-muted">📧 2425</span><span class="bdg bdg-risk">🎯 9</span></div></div><div class="proj-pct-circle mid"><div class="proj-pct-num">41%</div><div class="proj-pct-lbl">готовность</div></div></a></div>  <div class="foot">ProjectHelper · обновляется автоматически<br>Кликните по проекту для детальной сводки</div>
+</div>
+<script>
+(function(){
+  var inp = document.getElementById("projSearch");
+  if (!inp) return;
+  inp.addEventListener("input", function(){
+    var q = inp.value.toLowerCase().trim();
+    var groups = document.querySelectorAll(".gip-group");
+    groups.forEach(function(g){
+      var cards = g.querySelectorAll(".proj-card");
+      var visible = 0;
+      cards.forEach(function(c){
+        var t = c.textContent.toLowerCase();
+        var ok = !q || t.indexOf(q) >= 0;
+        c.classList.toggle("hidden", !ok);
+        if (ok) visible++;
+      });
+      g.classList.toggle("hidden", visible === 0);
+    });
+  });
+})();
+</script>
+</body>
+</html>
