@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-25T06:18:07.805Z",
+  "updatedAt": "2026-09-25T08:27:43.225Z",
   "projects": [
     {
       "slug": "2-bd79",
@@ -14,8 +14,8 @@
       "deadlines": 1,
       "protocols": 26,
       "mail": 2425,
-      "risks": 9,
-      "publishedAt": 1790317087805
+      "risks": 10,
+      "publishedAt": 1790324863225
     }
   ]
 }
