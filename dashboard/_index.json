@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-25T12:39:09.006Z",
+  "updatedAt": "2026-09-25T14:15:43.925Z",
   "projects": [
     {
       "slug": "2-bd79",
@@ -11,11 +11,11 @@
       "url": "https://avovka0-spec.github.io/qr-status/dashboard/2-bd79.html",
       "overallPct": 41,
       "attention": 2,
-      "deadlines": 3,
+      "deadlines": 1,
       "protocols": 26,
-      "mail": 2409,
+      "mail": 2425,
       "risks": 10,
-      "publishedAt": 1790339949006
+      "publishedAt": 1790345743925
     }
   ]
 }
