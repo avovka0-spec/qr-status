@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-24T17:03:42.624Z",
+  "updatedAt": "2026-09-25T06:11:35.502Z",
   "projects": [
     {
       "_test": true,
@@ -161,6 +161,21 @@
       "mail": 5,
       "risks": 4,
       "publishedAt": 1790263000000
+    },
+    {
+      "slug": "2-bd79",
+      "name": "Тест2",
+      "gip": "",
+      "objName": "ыыы",
+      "customer": "",
+      "url": "https://avovka0-spec.github.io/qr-status/dashboard/2-bd79.html",
+      "overallPct": 41,
+      "attention": 2,
+      "deadlines": 1,
+      "protocols": 26,
+      "mail": 2425,
+      "risks": 9,
+      "publishedAt": 1790316695502
     }
   ]
 }
